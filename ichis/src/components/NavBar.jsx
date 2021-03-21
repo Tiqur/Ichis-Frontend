@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import FlexDiv from './FlexDiv';
 import GithubIcon from '../assets/github-icon.png'
 import HamburgerIcon from './HamburgerIcon';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 
@@ -29,7 +30,9 @@ const NavBar = (props) => {
     return (
         <NavContainer scrolled={isScrolled}>
             <HamburgerIcon />
-            <img src={GithubIcon} style={{position: "absolute", right: "8px", height: "40px"}}/>
+            <a style={{position: "absolute", right: "8px", height: "35px"}} href='https://github.com/Tiqur/ichis-frontend'>
+                <img src={GithubIcon} style={{height: "35px"}}/>
+            </a>
         </NavContainer>
     )
 };
