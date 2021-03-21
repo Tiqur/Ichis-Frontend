@@ -18,11 +18,13 @@ const BarDiv = styled(FlexDiv)`
 const Container = styled(FlexDiv)`
     margin-top: ${props => props.open ? '8px' : '0px'};
     flex-direction: column;
-    align-content: center;
+    justify-content: center;
     align-items: center;
     margin-bottom: 4px;
     transition: 300ms;
+    height: 30px;
 
+    
     &:hover * {
         opacity: 80%;
     }
