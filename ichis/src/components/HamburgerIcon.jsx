@@ -22,6 +22,10 @@ const Container = styled(FlexDiv)`
     align-items: center;
     margin-bottom: 4px;
     transition: 300ms;
+
+    &:hover * {
+        opacity: 80%;
+    }
 `;
 
 const HamburgerIcon = () => {
