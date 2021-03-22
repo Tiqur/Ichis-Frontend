@@ -26,7 +26,11 @@ const Container = styled(FlexDiv)`
 
     
     &:hover * {
-        opacity: 80%;
+        background: #929292;
+    }
+
+    &:hover {
+        cursor: pointer;
     }
 `;
 

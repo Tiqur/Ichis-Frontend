@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import FlexDiv from './FlexDiv';
 import GithubIcon from '../assets/github-icon.png'
 import HamburgerIcon from './HamburgerIcon';
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 
