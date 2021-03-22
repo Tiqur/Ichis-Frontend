@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import FlexDiv from './FlexDiv';
 import GithubIcon from '../assets/github-icon.png'
 import HamburgerIcon from './HamburgerIcon';
+import Drawer from './Drawer';
 import { useEffect, useState } from 'react';
 
 
@@ -19,6 +20,7 @@ const NavContainer = styled(FlexDiv)`
 const NavBar = (props) => {
     
     const [isScrolled, setScrolled] = useState(false);
+    const [drawerIsOpen, setDrawerOpen] = useState(false);
 
     useEffect(() => {
         document.addEventListener('scroll', () => {
@@ -28,7 +30,8 @@ const NavBar = (props) => {
 
     return (
         <NavContainer scrolled={isScrolled}>
-            <HamburgerIcon />
+            <Drawer show={drawerIsOpen} />
+            <HamburgerIcon drawerState={[drawerIsOpen, setDrawerOpen]} />
             <a style={{position: "absolute", right: "8px", height: "35px"}} href='https://github.com/Tiqur/ichis-frontend'>
                 <img src={GithubIcon} style={{height: "35px"}}/>
             </a>

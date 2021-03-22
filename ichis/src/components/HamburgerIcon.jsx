@@ -5,7 +5,7 @@ import FlexDiv from './FlexDiv';
 
 const BarDiv = styled(FlexDiv)`
     background: white;
-    margin-left: 8px;
+    margin-left: ${props => props.open ? '208px' : '8px'};
     height: 5px;
     width: 33px;
     border-radius: 5px;
@@ -34,9 +34,9 @@ const Container = styled(FlexDiv)`
     }
 `;
 
-const HamburgerIcon = () => {
+const HamburgerIcon = (props) => {
 
-    const [IsOpen, SetOpen] = useState(false);
+    const [IsOpen, SetOpen] = props.drawerState;
 
     return (
         <Container open={IsOpen} onClick={() => {SetOpen(!IsOpen)}}>
