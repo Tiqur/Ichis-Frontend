@@ -29,13 +29,16 @@ const NavBar = (props) => {
     }, []);
 
     return (
-        <NavContainer scrolled={isScrolled}>
+        <>
+            <NavContainer scrolled={isScrolled}>
+                <a style={{position: "absolute", right: "8px", height: "35px"}} href='https://github.com/Tiqur/ichis-frontend'>
+                    <img src={GithubIcon} style={{height: "35px"}}/>
+                </a>
+            </NavContainer>
             <Drawer show={drawerIsOpen} />
             <HamburgerIcon drawerState={[drawerIsOpen, setDrawerOpen]} />
-            <a style={{position: "absolute", right: "8px", height: "35px"}} href='https://github.com/Tiqur/ichis-frontend'>
-                <img src={GithubIcon} style={{height: "35px"}}/>
-            </a>
-        </NavContainer>
+        </>
+
     )
 };
 

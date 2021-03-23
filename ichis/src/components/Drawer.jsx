@@ -1,22 +1,21 @@
 import styled from 'styled-components';
 import FlexDiv from './FlexDiv';
-
+import HamburgerIcon from './HamburgerIcon';
 
 const DrawerContainer = styled(FlexDiv)`
     position: fixed;
     height: 100vh;
     width: ${props => props.show ? '250px' : '0px'};
-    transition: 150ms;
+    transition: 300ms;
     background: #181818;
 `;
 
 
 const Drawer = (props) => {
 
-    console.log(props.show)
-
     return (
         <DrawerContainer show={props.show}>
+                {/* <HamburgerIcon drawerState={props.drawerState} /> */}
 
         </DrawerContainer>
     )
