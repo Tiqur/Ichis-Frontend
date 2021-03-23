@@ -35,11 +35,11 @@ const HeroContainer = (props) => {
     return (
         <HeightContainer>
             <ContentBox>
-                <Text color='#CDCDCD' size='36px'>
+                <Text color='#CDCDCD' size='59px'>
                     Perfectly synced video for everyone                
                 </Text>
-                <Text color='#8A8585' size='18px'>
-                    Ichis is a minimalistic video player designed to deliver crystal clear, synchronized audio and video to numerous users at once.
+                <Text color='#8A8585' size='30px'>
+                    Ichis is a minimalistic video player designed to deliver <br/>crystal clear, synchronized audio and video to<br/>numerous users at once.
                 </Text>
             </ContentBox>
             <ImageContainer />
