@@ -15,7 +15,7 @@ const BarDiv = styled(FlexDiv)`
 `;
 
 const Container = styled(FlexDiv)`
-    position: absolute;
+    position: fixed;
     top: ${props => props.open ? '8px' : '0px'};
     left: ${props => props.open ? '200px' : '0px'};
     flex-direction: column;
@@ -23,6 +23,7 @@ const Container = styled(FlexDiv)`
     transition: 300ms;
     align-items: center;
     margin-bottom: 4px;
+    margin-top: 4px;
     height: 30px;
     z-index: 1;
     
