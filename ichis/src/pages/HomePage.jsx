@@ -15,11 +15,10 @@ const ContentBox = styled(FlexDiv)`
     flex-direction: column;
     position: sticky;
     top: 20px;
-    height: 50%;
+    height: 40%;
     width: 50%;
     margin-left: 50px;
     text-align: center;
-    background: red;
 `;
 
 
@@ -27,13 +26,13 @@ const ImageContainer = styled(FlexDiv)`
     height: 70%;
     width: 50%;
     margin-right: 50px;
-    background: green;
 `;
 
 
-const HeroContainer = (props) => {
+const HomePage = (props) => {
     return (
-        <HeightContainer>
+        <FlexDiv direction="column" >
+            <HeightContainer>
             <ContentBox>
                 <Text color='#CDCDCD' size='59px'>
                     Perfectly synced video for everyone                
@@ -43,18 +42,25 @@ const HeroContainer = (props) => {
                 </Text>
             </ContentBox>
             <ImageContainer />
-        </HeightContainer>
-    )
-};
+            </HeightContainer>
 
-
-
-const HomePage = (props) => {
-    return (
-        <FlexDiv direction="column" >
-            <HeroContainer />
-            <HeroContainer />
-            <HeroContainer />
+            <HeightContainer>
+            <ImageContainer />
+            <ContentBox>
+                <Text color='#CDCDCD' size='59px'>
+                    Watch unlimited videos from a variety of different platforms                
+                </Text>
+            </ContentBox>
+            </HeightContainer>
+            
+            <HeightContainer>
+            <ContentBox>
+                <Text color='#CDCDCD' size='59px'>
+                    Watch on any device              
+                </Text>
+            </ContentBox>
+            <ImageContainer />
+            </HeightContainer>
             <NavBar />
         </FlexDiv>
     )
