@@ -3,22 +3,16 @@ import FlexDiv from '../components/FlexDiv';
 import NavBar from '../components/NavBar';
 
 
-const Container = styled(FlexDiv)`
-    flex-direction: column;
-`;
-
 const HeightContainer = styled(FlexDiv)`
     height: 100vh;
-    background: ${props => props.color};
     width: 100%;
+    background: ${props => props.color};
 `;
-
-
 
 const HeroContainer = (props) => {
     return (
         <HeightContainer>
-            
+
         </HeightContainer>
     )
 };
@@ -27,11 +21,11 @@ const HeroContainer = (props) => {
 
 const HomePage = (props) => {
     return (
-        <Container>
+        <FlexDiv direction="column" >
             <NavBar />
             <HeightContainer color='blue'/>
             <HeightContainer color='red'/>
-        </Container>
+        </FlexDiv>
     )
 };
 
