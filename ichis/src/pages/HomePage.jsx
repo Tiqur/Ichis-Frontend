@@ -9,16 +9,16 @@ const HeightContainer = styled(FlexDiv)`
     width: 100%;
     flex-direction: row;
     align-items: center;
-    background: ${props => props.color};
 `;
 
 const ContentBox = styled(FlexDiv)`
     flex-direction: column;
-    height: 70%;
+    position: sticky;
+    top: 20px;
+    height: 50%;
     width: 50%;
     margin-left: 50px;
     text-align: center;
-    justify-content: center;
     background: red;
 `;
 
@@ -52,10 +52,10 @@ const HeroContainer = (props) => {
 const HomePage = (props) => {
     return (
         <FlexDiv direction="column" >
+            <HeroContainer />
+            <HeroContainer />
+            <HeroContainer />
             <NavBar />
-            <HeroContainer />
-            <HeroContainer />
-            <HeroContainer />
         </FlexDiv>
     )
 };
