@@ -16,8 +16,8 @@ const BarDiv = styled(FlexDiv)`
 
 const Container = styled(FlexDiv)`
     position: absolute;
-    margin-top: ${props => props.open ? '8px' : '0px'};
-    margin-left: ${props => props.open ? '200px' : '0px'};
+    top: ${props => props.open ? '8px' : '0px'};
+    left: ${props => props.open ? '200px' : '0px'};
     flex-direction: column;
     justify-content: center;
     transition: 300ms;
@@ -32,6 +32,11 @@ const Container = styled(FlexDiv)`
 
     &:hover {
         cursor: pointer;
+    }
+
+    @media(max-width: 600px) {
+        top: ${props => props.open ? '76vh' : '0px'};
+        left: 0px;
     }
 `;
 
