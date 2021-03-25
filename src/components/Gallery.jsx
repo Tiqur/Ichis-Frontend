@@ -30,6 +30,7 @@ const ImageDiv = styled.img`
     background: blue;
     transition: 300ms;
     transform: rotateY(${props => props.degY}deg) translateZ(520px);
+    opacity: ${props => props.main ? '1' : '.2'};
 `;
 
 const Gallery = (props) => {
@@ -37,15 +38,21 @@ const Gallery = (props) => {
     const children = props.children;
     const [currentDegrees, setCurrentDegrees] = useState(0);
     const degreesY = 360 / children.length;
+    const rotations = currentDegrees / degreesY;
 
     setTimeout(() => {
+        console.log(360 - rotations * 60 % 360)
         setCurrentDegrees(currentDegrees + degreesY)
     }, 3000);
 
     return (
         <Container>
-            <Carousel degY={currentDegrees} onClick={() => {setCurrentDegrees(currentDegrees + degreesY)}}>
-                {children.map(e => <ImageDiv key={children.indexOf(e)} src={e.props.src} degY={degreesY*(children.indexOf(e))}></ImageDiv>)}
+            <Carousel degY={currentDegrees}>
+                {children.map(e => <ImageDiv 
+                key={children.indexOf(e)} 
+                src={e.props.src} 
+                main={360 - rotations * 60 % 360 === degreesY*children.indexOf(e)} 
+                degY={degreesY*children.indexOf(e)}></ImageDiv>)}
             </Carousel>
         </Container>
     )
