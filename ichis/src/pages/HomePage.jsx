@@ -31,6 +31,8 @@ const ContentBox = styled(FlexDiv)`
 
 
 const ImageContainer = styled(FlexDiv)`
+    justify-content: center;
+    align-items: center;
     height: 70%;
     width: 50%;
     margin-right: 50px;
@@ -51,12 +53,12 @@ const HomePage = (props) => {
             </ContentBox>
             <ImageContainer>
                 <Gallery>
-                    <img src='https://dummyimage.com/600x400/ff00ff/0011ff'/>
-                    <img src='https://dummyimage.com/600x400/ff0000/fff'/>
-                    <img src='https://dummyimage.com/600x400/00ccff/fff'/>
-                    <img src='https://dummyimage.com/600x400/00ff73/fff'/>
-                    <img src='https://dummyimage.com/600x400/ccff00/fff'/>
-                    <img src='https://dummyimage.com/600x400/ffb700/fff'/>
+                    <img src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
+                    <img src='https://dummyimage.com/1920x1080/ff0000/fff'/>
+                    <img src='https://dummyimage.com/1920x1080/00ccff/fff'/>
+                    <img src='https://dummyimage.com/1920x1080/00ff73/fff'/>
+                    <img src='https://dummyimage.com/1920x1080/ccff00/fff'/>
+                    <img src='https://dummyimage.com/1920x1080/ffb700/fff'/>
                 </Gallery>
             </ImageContainer>
             </HeightContainer>
