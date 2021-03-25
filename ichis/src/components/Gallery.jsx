@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import FlexDiv from './FlexDiv';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 const Container = styled.div`
@@ -25,11 +25,11 @@ const Carousel = styled(FlexDiv)`
 const ImageDiv = styled.img`
     display: block;
     position: absolute;
-    height: 150px;
+    height: 280px;
     margin: 0px 5px 0px 5px;
     background: blue;
     transition: 300ms;
-    transform: rotateY(${props => props.degY}deg) translateZ(250px);
+    transform: rotateY(${props => props.degY}deg) translateZ(520px);
 `;
 
 const Gallery = (props) => {
@@ -38,10 +38,14 @@ const Gallery = (props) => {
     const [currentDegrees, setCurrentDegrees] = useState(0);
     const degreesY = 360 / children.length;
 
+    setTimeout(() => {
+        setCurrentDegrees(currentDegrees + degreesY)
+    }, 3000);
+
     return (
         <Container>
             <Carousel degY={currentDegrees} onClick={() => {setCurrentDegrees(currentDegrees + degreesY)}}>
-                {children.map(e => <ImageDiv src={e.props.src} degY={degreesY*(props.children.indexOf(e))}></ImageDiv>)}
+                {children.map(e => <ImageDiv key={children.indexOf(e)} src={e.props.src} degY={degreesY*(children.indexOf(e))}></ImageDiv>)}
             </Carousel>
         </Container>
     )
