@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import FlexDiv from '../components/FlexDiv';
 import NavBar from '../components/NavBar';
 import Text from '../components/Text';
+import { keyframes } from 'styled-components';
 
 
 const HeightContainer = styled(FlexDiv)`
@@ -9,6 +10,12 @@ const HeightContainer = styled(FlexDiv)`
     width: 100%;
     flex-direction: row;
     align-items: center;
+`;
+
+
+const fadeIn = keyframes`
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0px); opacity: 1; }
 `;
 
 const ContentBox = styled(FlexDiv)`
@@ -19,6 +26,7 @@ const ContentBox = styled(FlexDiv)`
     width: 50%;
     margin-left: 50px;
     text-align: center;
+    animation: 500ms ${fadeIn} ease-in;
 `;
 
 
