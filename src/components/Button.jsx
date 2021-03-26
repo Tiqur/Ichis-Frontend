@@ -10,6 +10,7 @@ const Container = styled(FlexDiv)`
     transition: 300ms;
     justify-content: center;
     align-items: center;
+    margin: ${props => props.margin}px;
 
     &:hover {
         background: ${props => props.hoverColor};
@@ -27,7 +28,8 @@ const Button = (props) => {
             backgroundColor={props.backgroundColor || 'blue'} 
             textColor={props.textColor || 'black'}
             radius={props.radius || '15'}
-            hoverColor={props.hoverColor || 'grey'}>
+            hoverColor={props.hoverColor || 'grey'}
+            margin={props.margin || '30'}>
             {props.children}
         </Container>
     );
