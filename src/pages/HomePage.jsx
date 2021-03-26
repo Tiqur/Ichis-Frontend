@@ -53,7 +53,7 @@ const HomePage = (props) => {
                 </TextContainer>
            </ContentBox>
             <ImageContainer>
-                <Gallery spacing={'420px'} size={'200px'}>
+                <Gallery spacing={420} size={200}>
                     <img src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
                     <img src='https://dummyimage.com/1920x1080/ff0000/fff'/>
                     <img src='https://dummyimage.com/1920x1080/00ccff/fff'/>

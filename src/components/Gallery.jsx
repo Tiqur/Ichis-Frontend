@@ -29,11 +29,22 @@ const Carousel = styled(FlexDiv)`
 const ImageDiv = styled.img`
     display: block;
     position: absolute;
-    height: ${props => props.size};
+    height: ${props => props.size}px;
     margin: 0px 5px 0px 5px;
     transition: 300ms;
-    transform: rotateY(${props => props.degY}deg) translateZ(${props => props.translateZ || 0});
+    transform: rotateY(${props => props.degY}deg) translateZ(${props => props.translateZ || 0}px);
     opacity: ${props => props.main ? '1' : '.2'};
+
+    @media(max-width: 2150px) {
+        height: ${props => props.size -50}px;
+        transform: rotateY(${props => props.degY}deg) translateZ(${props => props.translateZ -80 || 0}px);
+    }
+
+    @media(max-width: 1650px) {
+        height: ${props => props.size -50}px;
+        opacity: ${props => props.main ? '1' : '0'};
+    }
+
 `;
 
 const Gallery = (props) => {
