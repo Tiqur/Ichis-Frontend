@@ -76,7 +76,7 @@ const HomePage = (props) => {
                     <Text color='#8A8585' size={30}>
                         Ichis is a minimalistic video player designed to deliver <br/>crystal clear, synchronized audio and video to<br/>numerous users at once.
                     </Text>
-                    <FlexDiv direction='row'>
+                    <FlexDiv direction='row' style={{justifyContent: 'center'}}>
                         <Button backgroundColor='#6C63FF' hoverColor='#4b43e6' radius={76} width={180} height={60} function={() => {console.log("Create Room")}}>
                             <Text weight='bold' color='#e1e1e1' dontSelect>
                                 Create Room
