@@ -4,7 +4,6 @@ import FlexDiv from './FlexDiv';
 
 const BarDiv = styled(FlexDiv)`
     background: white;
-    margin-left: 8px;
     height: 8px;
     width: 45px;
     border-radius: 5px;
@@ -15,15 +14,15 @@ const BarDiv = styled(FlexDiv)`
 `;
 
 const Container = styled(FlexDiv)`
-    position: fixed;
-    top: ${props => props.open ? '8px' : '0px'};
-    left: ${props => props.open ? '195px' : '0px'};
+    left: ${props => props.open ? '235px' : 'initial'};
+    position: ${props => props.open ? 'fixed' : 'initial'};
     flex-direction: column;
     justify-content: center;
-    transition: 300ms;
     align-items: center;
     margin-bottom: 4px;
-    margin-top: 4px;
+    margin-top: 8px;
+    margin-right: auto;
+    transition: 300ms;
     height: 50px;
     z-index: 1;
     

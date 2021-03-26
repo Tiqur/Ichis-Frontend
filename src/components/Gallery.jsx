@@ -10,8 +10,6 @@ const fadeIn = keyframes`
 
 const Container = styled.div`
   margin: 0 auto;
-  width: 250px;
-  height: 200px;
   position: relative;
   perspective: 1000px;
   animation: 500ms ${fadeIn} ease-in;
@@ -33,7 +31,6 @@ const ImageDiv = styled.img`
     position: absolute;
     height: ${props => props.size};
     margin: 0px 5px 0px 5px;
-    background: blue;
     transition: 300ms;
     transform: rotateY(${props => props.degY}deg) translateZ(${props => props.translateZ || 0});
     opacity: ${props => props.main ? '1' : '.2'};
@@ -45,10 +42,16 @@ const Gallery = (props) => {
     const [currentDegrees, setCurrentDegrees] = useState(0);
     const degreesY = 360 / children.length;
     const rotations = currentDegrees / degreesY;
+    let rotateTimeout = null;
 
-    setTimeout(() => {
-        setCurrentDegrees(currentDegrees + degreesY)
-    }, 3000);
+    // Auto rotate gallery
+    const startAutoRotate = () => {
+        rotateTimeout = setTimeout(() => {
+            setCurrentDegrees(currentDegrees + degreesY)
+        }, 3000);
+    }
+
+    startAutoRotate();
 
     return (
         <Container>
@@ -59,6 +62,11 @@ const Gallery = (props) => {
                 src={e.props.src} 
                 translateZ={props.spacing}
                 main={(rotations * degreesY % 360 === 0 ? 0 : 360) - rotations * 60 % 360 === degreesY*children.indexOf(e)} 
+                onClick={() => {
+                    // Rotate on click and reset timeout
+                    clearTimeout(rotateTimeout);
+                    setCurrentDegrees(currentDegrees + degreesY);
+                }}
                 degY={degreesY*children.indexOf(e)}></ImageDiv>)}
             </Carousel>
         </Container>

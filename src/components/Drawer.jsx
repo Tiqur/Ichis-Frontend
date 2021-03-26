@@ -5,9 +5,10 @@ const DrawerContainer = styled(FlexDiv)`
     position: fixed;
     left: 0;
     height: 100vh;
-    width: ${props => props.show ? '250px' : '0px'};
+    width: ${props => props.show ? '300px' : '0px'};
     transition: 300ms;
     background: #181818;
+
 
     @media(max-width: 600px) {
         width: ${props => props.show ? '100vw' : '0'};

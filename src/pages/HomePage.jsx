@@ -45,7 +45,7 @@ const HomePage = (props) => {
             <ContentBox>
                 <TextContainer>
                     <Text color='#CDCDCD' size='59px'>
-                        Perfectly synced video for everyone                
+                        Perfectly synchronized video for everyone                
                     </Text>
                     <Text color='#8A8585' size='30px'>
                         Ichis is a minimalistic video player designed to deliver <br/>crystal clear, synchronized audio and video to<br/>numerous users at once.

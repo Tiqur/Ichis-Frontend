@@ -18,6 +18,14 @@ const NavContainer = styled(FlexDiv)`
     filter: ${props => props.scrolled ? 'drop-shadow(0px 0px 4px #000000)' : ''};
 `;
 
+const InternalContainer = styled(FlexDiv)`
+    position: fixed;
+    flex-direction: row;
+    width: 80%;
+    height: 80px;
+    justify-content: center;
+`;
+
 const NavBar = (props) => {
     
     const [isScrolled, setScrolled] = useState(false);
@@ -31,13 +39,14 @@ const NavBar = (props) => {
 
     return (
         <>
-            <NavContainer scrolled={isScrolled}>
-                <a style={{position: 'absolute', right: "8px", height: "50px"}} href='https://github.com/Tiqur/ichis-frontend'>
-                    <img src={GithubIcon} style={{height: "50px"}}/>
-                </a>
-            </NavContainer>
-            <Drawer show={drawerIsOpen} />
+            <NavContainer scrolled={isScrolled} />
+            <InternalContainer>
             <HamburgerIcon drawerState={[drawerIsOpen, setDrawerOpen]} />
+            <a style={{marginLeft: 'auto', right: "8px", height: "52px"}} href='https://github.com/Tiqur/ichis-frontend'>
+                <img src={GithubIcon} style={{height: "52px", marginTop: '18px'}}/>
+            </a>
+            <Drawer show={drawerIsOpen} />
+            </InternalContainer>
         </>
 
     )
