@@ -12,9 +12,21 @@ const HeightContainer = styled(FlexDiv)`
     flex-direction: row;
     align-items: center;
     margin-top: 50px;
-    // Mobile: put image under content
+
+    // Alternate image position
+    &:nth-child(2) {
+        flex-direction: row-reverse;
+    }
+
+    // Mobile
     @media(max-width: 1050px) {
+        // Put image under content
         flex-direction: column;
+        
+        // Don't alternate image position
+        &:nth-child(2) {
+            flex-direction: column;
+        }
     }
 `;
 
@@ -75,12 +87,12 @@ const HomePage = (props) => {
             </HeightContainer>
 
             <HeightContainer>
-            <ImageContainer />
             <ContentBox>
                 <Text color='#CDCDCD' size='59px'>
                     Watch unlimited videos from a variety of different platforms                
                 </Text>
             </ContentBox>
+            <ImageContainer />
             </HeightContainer>
             
             <HeightContainer>
