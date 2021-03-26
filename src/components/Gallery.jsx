@@ -28,6 +28,11 @@ const Carousel = styled(FlexDiv)`
   @media(max-width: 2150px) {
     transform: rotateX(${props => props.degY}deg);
   }
+
+  // Mobile
+  @media(max-width: 1050px) {
+    transform: rotateY(${props => props.degY}deg);
+  }
 `;
 
 const ImageDiv = styled.img`
@@ -50,7 +55,9 @@ const ImageDiv = styled.img`
 
     // Mobile
     @media(max-width: 1050px) {
+        transform: rotateY(${props => props.degY}deg) translateZ(${props => props.translateZ || 0}px);
         opacity: ${props => props.main ? '1' : '0'};
+        height: ${props => props.main ? 'initial' : '0'}px;
     }
 
 `;

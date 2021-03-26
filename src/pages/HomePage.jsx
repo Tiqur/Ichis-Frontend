@@ -22,7 +22,7 @@ const HeightContainer = styled(FlexDiv)`
     @media(max-width: 1050px) {
         // Put image under content
         flex-direction: column;
-        
+
         // Don't alternate image position
         &:nth-child(2) {
             flex-direction: column;
@@ -66,10 +66,10 @@ const HomePage = (props) => {
             <HeightContainer>
             <ContentBox>
                 <TextContainer>
-                    <Text color='#CDCDCD' size='59px'>
+                    <Text color='#CDCDCD' size={59}>
                         Perfectly synchronized video for everyone                
                     </Text>
-                    <Text color='#8A8585' size='30px'>
+                    <Text color='#8A8585' size={30}>
                         Ichis is a minimalistic video player designed to deliver <br/>crystal clear, synchronized audio and video to<br/>numerous users at once.
                     </Text>
                 </TextContainer>
@@ -88,7 +88,7 @@ const HomePage = (props) => {
 
             <HeightContainer>
             <ContentBox>
-                <Text color='#CDCDCD' size='59px'>
+                <Text color='#CDCDCD' size={59}>
                     Watch unlimited videos from a variety of different platforms                
                 </Text>
             </ContentBox>
@@ -97,7 +97,7 @@ const HomePage = (props) => {
             
             <HeightContainer>
             <ContentBox>
-                <Text color='#CDCDCD' size='59px'>
+                <Text color='#CDCDCD' size={59}>
                     Watch on any device              
                 </Text>
             </ContentBox>
