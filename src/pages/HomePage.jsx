@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar';
 import Text from '../components/Text';
 import Gallery from '../components/Gallery';
 import TextContainer from '../components/TextContainer';
+import Logo from '../components/Logo';
 import { keyframes } from 'styled-components';
 
 const HeightContainer = styled(FlexDiv)`
@@ -66,6 +67,7 @@ const HomePage = (props) => {
             <HeightContainer>
             <ContentBox>
                 <TextContainer>
+                    <Logo size={50}/>
                     <Text color='#CDCDCD' size={59}>
                         Perfectly synchronized video for everyone                
                     </Text>
