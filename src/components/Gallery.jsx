@@ -41,7 +41,6 @@ const Gallery = (props) => {
     const rotations = currentDegrees / degreesY;
 
     setTimeout(() => {
-        console.log(360 - rotations * 60 % 360)
         setCurrentDegrees(currentDegrees + degreesY)
     }, 3000);
 
@@ -51,7 +50,7 @@ const Gallery = (props) => {
                 {children.map(e => <ImageDiv 
                 key={children.indexOf(e)} 
                 src={e.props.src} 
-                main={360 - rotations * 60 % 360 === degreesY*children.indexOf(e)} 
+                main={(rotations * degreesY % 360 === 0 ? 0 : 360) - rotations * 60 % 360 === degreesY*children.indexOf(e)} 
                 degY={degreesY*children.indexOf(e)}></ImageDiv>)}
             </Carousel>
         </Container>
