@@ -5,7 +5,7 @@ const Text = styled.p`
     font-weight: ${props => props.weight ? props.weight : 'initial'};
     font-size: ${props => props.size ? props.size : 'initial'}px;
     font-family: 'Roboto';
-
+    user-select: ${props => props.dontSelect ? 'none' : 'initial'};
 
     // Mobile
     @media(max-width: 1050px) {

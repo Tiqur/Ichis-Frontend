@@ -5,7 +5,9 @@ import Text from '../components/Text';
 import Gallery from '../components/Gallery';
 import TextContainer from '../components/TextContainer';
 import Logo from '../components/Logo';
+import Button from '../components/Button';
 import { keyframes } from 'styled-components';
+
 
 const HeightContainer = styled(FlexDiv)`
     height: 100vh;
@@ -74,6 +76,18 @@ const HomePage = (props) => {
                     <Text color='#8A8585' size={30}>
                         Ichis is a minimalistic video player designed to deliver <br/>crystal clear, synchronized audio and video to<br/>numerous users at once.
                     </Text>
+                    <FlexDiv direction='row'>
+                        <Button backgroundColor='#6C63FF' hoverColor='#4b43e6' radius={76} width={180} height={60} function={() => {console.log("Create Room")}}>
+                            <Text weight='bold' color='#e1e1e1' dontSelect>
+                                Create Room
+                            </Text>
+                        </Button>                        
+                        <Button backgroundColor='#44474C' hoverColor='#34373c' radius={76} width={130} height={60} function={() => {console.log("Download")}}>
+                            <Text weight='bold' color='#e1e1e1' dontSelect>
+                                Download
+                            </Text>
+                        </Button>
+                    </FlexDiv>
                 </TextContainer>
            </ContentBox>
             <ImageContainer>

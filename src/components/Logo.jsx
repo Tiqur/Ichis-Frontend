@@ -33,7 +33,7 @@ const Triangle = styled.div`
 
 const AnimateSquares = (ref, h) => {
     const height = 50;
-    ref.style.transform = `translateX(${24}px) translateY(${-4-height}px) rotateZ(0deg)`;
+    ref.style.transform = `translateX(${h+24}px) translateY(${-4-height}px) rotateZ(0deg)`;
     setTimeout(() => {
         ref.style.transform = `translateX(${h+24}px) translateY(${h}px) rotateZ(-45deg)`;
     }, 301);
@@ -44,8 +44,8 @@ const Logo = (props) => {
     const sr2 = useRef(null);
     const sr3 = useRef(null);
     const s1h = -4;
-    const s2h = 4;
-    const s3h = 12;
+    const s2h = 2;
+    const s3h = 10;
 
     useEffect(() => {
         // Animate logo on page load
@@ -60,7 +60,7 @@ const Logo = (props) => {
             <Square height={s2h}  size={props.size} color='#6C63FF' ref={sr2}/>
             <Square height={s3h} size={props.size} color='#6C63FF' ref={sr3}/>
             <Triangle height={-2} tx={-32} size={props.size} color='#948DFF'/>
-            <Triangle height={5}  tx={-38} size={props.size} color='#948DFF'/>
+            <Triangle height={5}  tx={-40} size={props.size} color='#948DFF'/>
         </Container>
     )
 };
