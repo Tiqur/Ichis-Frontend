@@ -89,7 +89,7 @@ const HomePage = (props) => {
             <HeightContainer>
             <ContentBox>
                 <Text color='#CDCDCD' size={59}>
-                    Watch unlimited videos from a variety of different platforms                
+                    Watch unlimited videos from a variety platforms                
                 </Text>
             </ContentBox>
             <ImageContainer />
