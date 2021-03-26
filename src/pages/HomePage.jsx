@@ -12,7 +12,7 @@ const HeightContainer = styled(FlexDiv)`
     width: 100%;
     flex-direction: row;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 100px;
 
     // Alternate image position
     &:nth-child(2) {
