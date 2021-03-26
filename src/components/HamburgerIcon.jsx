@@ -5,26 +5,26 @@ import FlexDiv from './FlexDiv';
 const BarDiv = styled(FlexDiv)`
     background: white;
     margin-left: 8px;
-    height: 5px;
-    width: 33px;
+    height: 8px;
+    width: 45px;
     border-radius: 5px;
     transition: 300ms;
-    margin-top: ${props => props.open ? '-5px' : '4px'};
-    transform: ${props => props.open ? props.a ? 'rotate(45deg)' : 'rotate(-45deg)': 'rotate(0)'};
+    margin-top: ${props => props.open ? '-5px' : '8px'};
+    transform: ${props => props.open ? props.a ? 'rotate(45deg) translateY(4px)' : 'rotate(-45deg) translateY(-4px)': 'rotate(0)'};
     opacity: ${props => props.open && props.b ? '0' : "100"};
 `;
 
 const Container = styled(FlexDiv)`
     position: fixed;
     top: ${props => props.open ? '8px' : '0px'};
-    left: ${props => props.open ? '200px' : '0px'};
+    left: ${props => props.open ? '195px' : '0px'};
     flex-direction: column;
     justify-content: center;
     transition: 300ms;
     align-items: center;
     margin-bottom: 4px;
     margin-top: 4px;
-    height: 30px;
+    height: 50px;
     z-index: 1;
     
     &:hover * {
@@ -36,7 +36,7 @@ const Container = styled(FlexDiv)`
     }
 
     @media(max-width: 600px) {
-        top: ${props => props.open ? '76vh' : '0px'};
+        top: ${props => props.open ? '75vh' : '0px'};
         left: 0px;
     }
 `;

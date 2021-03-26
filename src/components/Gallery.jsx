@@ -39,6 +39,7 @@ const Gallery = (props) => {
     const [currentDegrees, setCurrentDegrees] = useState(0);
     const degreesY = 360 / children.length;
     const rotations = currentDegrees / degreesY;
+
     setTimeout(() => {
         setCurrentDegrees(currentDegrees + degreesY)
     }, 3000);
