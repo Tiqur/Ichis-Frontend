@@ -11,6 +11,11 @@ const HeightContainer = styled(FlexDiv)`
     width: 100%;
     flex-direction: row;
     align-items: center;
+    margin-top: 50px;
+    // Mobile: put image under content
+    @media(max-width: 1050px) {
+        flex-direction: column;
+    }
 `;
 
 const fadeIn = keyframes`
@@ -28,6 +33,11 @@ const ContentBox = styled(FlexDiv)`
     width: 50%;
     text-align: center;
     animation: 500ms ${fadeIn} ease-in;
+
+    // Mobile: Remove 'sticky' effect
+    @media(max-width: 1050px) {
+        position: initial;
+    }
 `;
 
 const ImageContainer = styled(FlexDiv)`
