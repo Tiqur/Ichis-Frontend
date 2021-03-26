@@ -74,7 +74,7 @@ const Gallery = (props) => {
     // Auto rotate gallery
     const startAutoRotate = () => {
         rotateTimeout = setTimeout(() => {
-            setCurrentDegrees(currentDegrees + degreesY)
+            setCurrentDegrees(currentDegrees + degreesY % 360 === 0 ? 0 : currentDegrees + degreesY) 
         }, 3000);
     }
 
@@ -92,7 +92,7 @@ const Gallery = (props) => {
                 onClick={() => {
                     // Rotate on click and reset timeout
                     clearTimeout(rotateTimeout);
-                    setCurrentDegrees(currentDegrees + degreesY);
+                    setCurrentDegrees(currentDegrees + degreesY % 360 === 0 ? 0 : currentDegrees + degreesY) 
                 }}
                 degY={degreesY*children.indexOf(e)}></ImageDiv>)}
             </Carousel>
