@@ -10,10 +10,9 @@ import { keyframes } from 'styled-components';
 
 
 const HeightContainer = styled(FlexDiv)`
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     flex-direction: row;
-    align-items: center;
     margin-top: 100px;
 
     // Alternate image position
@@ -42,9 +41,8 @@ const ContentBox = styled(FlexDiv)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: sticky;
     top: 20px;
-    height: 70%;
+    height: 800px;
     width: 50%;
     text-align: center;
     animation: 500ms ${fadeIn} ease-in;
@@ -57,8 +55,10 @@ const ContentBox = styled(FlexDiv)`
 
 const ImageContainer = styled(FlexDiv)`
     justify-content: center;
+    position: sticky;
+    top: 100px;
     align-items: center;
-    height: 70%;
+    height: 800px;
     width: 50%;
 `;
 
@@ -108,8 +108,16 @@ const HomePage = (props) => {
                     Watch unlimited videos from a variety platforms                
                 </Text>
             </ContentBox>
-            <ImageContainer />
-            </HeightContainer>
+            <ImageContainer>
+                <Gallery spacing={420} size={200}>
+                    <img src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
+                    <img src='https://dummyimage.com/1920x1080/ff0000/fff'/>
+                    <img src='https://dummyimage.com/1920x1080/00ccff/fff'/>
+                    <img src='https://dummyimage.com/1920x1080/00ff73/fff'/>
+                    <img src='https://dummyimage.com/1920x1080/ccff00/fff'/>
+                    <img src='https://dummyimage.com/1920x1080/ffb700/fff'/>
+                </Gallery>
+            </ImageContainer>            </HeightContainer>
             
             <HeightContainer>
             <ContentBox>
@@ -117,8 +125,16 @@ const HomePage = (props) => {
                     Watch on any device              
                 </Text>
             </ContentBox>
-            <ImageContainer />
-            </HeightContainer>
+            <ImageContainer>
+                <Gallery spacing={420} size={200}>
+                    <img src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
+                    <img src='https://dummyimage.com/1920x1080/ff0000/fff'/>
+                    <img src='https://dummyimage.com/1920x1080/00ccff/fff'/>
+                    <img src='https://dummyimage.com/1920x1080/00ff73/fff'/>
+                    <img src='https://dummyimage.com/1920x1080/ccff00/fff'/>
+                    <img src='https://dummyimage.com/1920x1080/ffb700/fff'/>
+                </Gallery>
+            </ImageContainer>            </HeightContainer>
             <NavBar />
         </FlexDiv>
     )

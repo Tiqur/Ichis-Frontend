@@ -46,7 +46,7 @@ const ImageDiv = styled.img`
     user-select: none; 
     
     @media(max-width: 2150px) {
-        height: ${props => props.size -50}px;
+        height: ${props => props.size}px;
         transform: rotateX(${props => props.degY}deg) translateZ(${props => props.translateZ -80 || 0}px);
     }
 

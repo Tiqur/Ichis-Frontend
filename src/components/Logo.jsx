@@ -45,7 +45,7 @@ const Logo = (props) => {
     const sr3 = useRef(null);
     const s1h = -4;
     const s2h = 2;
-    const s3h = 10;
+    const s3h = 8;
 
     useEffect(() => {
         // Animate logo on page load
@@ -61,7 +61,7 @@ const Logo = (props) => {
             <Square height={s2h}  size={props.size} color='#6C63FF' ref={sr2}/>
             <Square height={s3h} size={props.size} color='#6C63FF' ref={sr3}/>
             <Triangle height={-2} tx={-32} size={props.size} color='#948DFF'/>
-            <Triangle height={5}  tx={-40} size={props.size} color='#948DFF'/>
+            <Triangle height={4}  tx={-40} size={props.size} color='#948DFF'/>
         </Container>
     )
 };
