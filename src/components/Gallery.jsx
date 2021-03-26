@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 import FlexDiv from './FlexDiv';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { keyframes } from 'styled-components';
 
+const fadeIn = keyframes`
+    from { opacity: 0; }
+    to { opacity: 1; }
+`;
 
 const Container = styled.div`
   margin: 0 auto;
@@ -9,6 +14,7 @@ const Container = styled.div`
   height: 200px;
   position: relative;
   perspective: 1000px;
+  animation: 500ms ${fadeIn} ease-in;
 `;
 
 const Carousel = styled(FlexDiv)`
