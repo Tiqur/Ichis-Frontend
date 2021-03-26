@@ -24,6 +24,10 @@ const Carousel = styled(FlexDiv)`
   transform-style: preserve-3d;
   transition: 800ms;
   transform: rotateY(${props => props.degY}deg);
+
+  @media(max-width: 2150px) {
+    transform: rotateX(${props => props.degY}deg);
+  }
 `;
 
 const ImageDiv = styled.img`
@@ -37,11 +41,15 @@ const ImageDiv = styled.img`
 
     @media(max-width: 2150px) {
         height: ${props => props.size -50}px;
-        transform: rotateY(${props => props.degY}deg) translateZ(${props => props.translateZ -80 || 0}px);
+        transform: rotateX(${props => props.degY}deg) translateZ(${props => props.translateZ -80 || 0}px);
     }
 
     @media(max-width: 1650px) {
         height: ${props => props.size -50}px;
+    }
+
+    // Mobile
+    @media(max-width: 1050px) {
         opacity: ${props => props.main ? '1' : '0'};
     }
 
