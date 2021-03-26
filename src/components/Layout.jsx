@@ -4,6 +4,11 @@ import FlexDiv from './FlexDiv';
 
 const LayoutContainer = styled(FlexDiv)`
     height: auto;
+    justify-content: center;
+`;
+
+const InternalLayoutContainer = styled(LayoutContainer)`
+    height: auto;
     width: 80%;
     justify-content: center;
 `;
@@ -11,7 +16,9 @@ const LayoutContainer = styled(FlexDiv)`
 const Layout = (props) => {
     return (
         <LayoutContainer>
-            {props.children}
+            <InternalLayoutContainer>
+                {props.children}
+            </InternalLayoutContainer>
         </LayoutContainer>
     )
 };

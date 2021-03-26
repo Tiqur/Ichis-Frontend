@@ -25,7 +25,7 @@ const Carousel = styled(FlexDiv)`
 const ImageDiv = styled.img`
     display: block;
     position: absolute;
-    height: 280px;
+    height: ${props => props.size};
     margin: 0px 5px 0px 5px;
     background: blue;
     transition: 300ms;
@@ -48,6 +48,7 @@ const Gallery = (props) => {
         <Container>
             <Carousel degY={currentDegrees}>
                 {children.map(e => <ImageDiv 
+                size={props.size}
                 key={children.indexOf(e)} 
                 src={e.props.src} 
                 translateZ={props.spacing}
