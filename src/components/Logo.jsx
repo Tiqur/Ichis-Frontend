@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import FlexDiv from './FlexDiv';
-
+import Text from '../components/Text';
 
 const Container = styled(FlexDiv)`
     justify-content: center;
@@ -49,13 +49,14 @@ const Logo = (props) => {
 
     useEffect(() => {
         // Animate logo on page load
-        setTimeout(() => {AnimateSquares(sr1.current, s1h)}, 1100);
-        setTimeout(() => {AnimateSquares(sr2.current, s2h)}, 1200);
-        setTimeout(() => {AnimateSquares(sr3.current, s3h)}, 1300);
+        setTimeout(() => {AnimateSquares(sr1.current, s1h)}, 600);
+        setTimeout(() => {AnimateSquares(sr2.current, s2h)}, 800);
+        setTimeout(() => {AnimateSquares(sr3.current, s3h)}, 1000);
     }, []);
 
     return (
         <Container>
+            <Text size={40} font='Sriracha' style={{marginLeft: '30px'}}>Ichis</Text>
             <Square height={s1h} size={props.size} color='#6C63FF' ref={sr1}/>
             <Square height={s2h}  size={props.size} color='#6C63FF' ref={sr2}/>
             <Square height={s3h} size={props.size} color='#6C63FF' ref={sr3}/>
