@@ -42,7 +42,7 @@ const NavBar = (props) => {
             <NavContainer scrolled={isScrolled} />
             <InternalContainer>
             <HamburgerIcon drawerState={[drawerIsOpen, setDrawerOpen]} />
-            <a style={{marginLeft: 'auto', right: "8px", height: "52px"}} href='https://github.com/Tiqur/ichis-frontend'>
+            <a style={{marginLeft: 'auto', right: "8px", height: "52px", userSelect: 'none'}} href='https://github.com/Tiqur/ichis-frontend'>
                 <img src={GithubIcon} style={{height: "52px", marginTop: '18px'}}/>
             </a>
             <Drawer show={drawerIsOpen} />

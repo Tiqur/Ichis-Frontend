@@ -43,7 +43,8 @@ const ImageDiv = styled.img`
     transition: 300ms;
     transform: rotateY(${props => props.degY}deg) translateZ(${props => props.translateZ || 0}px);
     opacity: ${props => props.main ? '1' : '.2'};
-
+    user-select: none; 
+    
     @media(max-width: 2150px) {
         height: ${props => props.size -50}px;
         transform: rotateX(${props => props.degY}deg) translateZ(${props => props.translateZ -80 || 0}px);

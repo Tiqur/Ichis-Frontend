@@ -11,6 +11,7 @@ const BarDiv = styled(FlexDiv)`
     margin-top: ${props => props.open ? '-5px' : '8px'};
     transform: ${props => props.open ? props.a ? 'rotate(45deg) translateY(4px)' : 'rotate(-45deg) translateY(-4px)': 'rotate(0)'};
     opacity: ${props => props.open && props.b ? '0' : "100"};
+    user-select: none;
 `;
 
 const Container = styled(FlexDiv)`
@@ -24,6 +25,7 @@ const Container = styled(FlexDiv)`
     margin-right: auto;
     transition: 300ms;
     height: 50px;
+    user-select: none;
     z-index: 1;
     
     &:hover * {

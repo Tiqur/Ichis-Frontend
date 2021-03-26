@@ -4,6 +4,7 @@ const Square = styled.div`
     height: ${props => props.size};
     width: ${props => props.size};
     color: ${props => props.color};
+    user-select: none;
 `;
 
 const Triangle = styled.div`
