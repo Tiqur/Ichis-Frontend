@@ -3,6 +3,7 @@ import FlexDiv from './FlexDiv';
 
 const DrawerContainer = styled(FlexDiv)`
     position: fixed;
+    left: 0;
     height: 100vh;
     width: ${props => props.show ? '250px' : '0px'};
     transition: 300ms;

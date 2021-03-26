@@ -2,19 +2,22 @@ import './index.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage'
+import Layout from './components/Layout';
 
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/dashboard" />
-        <Route exact path="/profile" />
-        <Route component={NotFoundPage} />
-      </Switch>
-    </BrowserRouter>
-  );
+    <Layout>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/dashboard" />
+          <Route exact path="/profile" />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </BrowserRouter> 
+    </Layout>
+ );
 }
 
 export default App;

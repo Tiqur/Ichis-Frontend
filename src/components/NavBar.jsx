@@ -12,6 +12,7 @@ const NavContainer = styled(FlexDiv)`
     background: #121212;
     transition: 200ms;
     position: fixed;
+    left: 0;
     width: 100%;
     height: 80px;
     filter: ${props => props.scrolled ? 'drop-shadow(0px 0px 4px #000000)' : ''};
@@ -31,7 +32,7 @@ const NavBar = (props) => {
     return (
         <>
             <NavContainer scrolled={isScrolled}>
-                <a style={{position: "absolute", right: "8px", height: "50px"}} href='https://github.com/Tiqur/ichis-frontend'>
+                <a style={{position: 'absolute', right: "8px", height: "50px"}} href='https://github.com/Tiqur/ichis-frontend'>
                     <img src={GithubIcon} style={{height: "50px"}}/>
                 </a>
             </NavContainer>
