@@ -136,7 +136,7 @@ const HomePage = () => {
                     </TextContainer>
                 </ContentBox>
                 <ImageContainer showContent={pageY >= pageHeight/2.5 && pageY < pageHeight} marginTop='-100vh'>
-                    <img style={{height: '400px'}} src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
+                    <img style={{height: 'auto', maxWidth: '100%'}} src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
                 </ImageContainer>           
             </HeightContainer>
             
@@ -151,7 +151,7 @@ const HomePage = () => {
                     </TextContainer>
                 </ContentBox>
                 <ImageContainer showContent={pageY >= pageHeight} marginTop='-100vh'>
-                    <img style={{height: '400px'}} src='https://dummyimage.com/1920x1080/ff0000/0011ff'/>
+                    <img style={{height: 'auto', maxWidth: '100%'}} src='https://dummyimage.com/1920x1080/ff0000/0011ff'/>
                 </ImageContainer>            
             </HeightContainer>
             <NavBar />
