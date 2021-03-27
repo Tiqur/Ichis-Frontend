@@ -7,10 +7,10 @@ import TextContainer from '../components/TextContainer';
 import Logo from '../components/Logo';
 import Button from '../components/Button';
 import { keyframes } from 'styled-components';
-
+import { useEffect, useState } from 'react';
 
 const HeightContainer = styled(FlexDiv)`
-    height: 200vh;
+    height: 150vh;
     width: 100%;
     flex-direction: row;
     margin-top: 100px;
@@ -42,10 +42,12 @@ const ContentBox = styled(FlexDiv)`
     align-items: center;
     justify-content: center;
     top: 20px;
-    height: 800px;
+    height: 75vh;
     width: 50%;
     text-align: center;
     animation: 500ms ${fadeIn} ease-in;
+    opacity: ${props => props.showContent ? '1' : '0'};
+    transition: 500ms;
 
     // Mobile: Remove 'sticky' effect
     @media(max-width: 1050px) {
@@ -58,16 +60,29 @@ const ImageContainer = styled(FlexDiv)`
     position: sticky;
     top: 100px;
     align-items: center;
-    height: 800px;
+    height: 75vh;
     width: 50%;
+    opacity: ${props => props.showContent ? '1' : '0'};
+    transition: 500ms;
 `;
 
 
 const HomePage = (props) => {
+    const [pageY, setPageY] = useState(false);
+    const pageHeight = window.outerHeight;
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {setPageY(window.pageYOffset)})
+        return window.removeEventListener('scroll', () => {setPageY(window.pageYOffset)})
+    }, [])
+
     return (
         <FlexDiv direction="column" style={{width: '100%'}}>
-            <HeightContainer>
-            <ContentBox>
+
+
+            {/*  Hero 1  */}
+            <HeightContainer showContent={pageY <= pageHeight/2}>
+            <ContentBox showContent={pageY <= pageHeight/2}>
                 <TextContainer>
                     <Logo size={50}/>
                     <Text color='#CDCDCD' size={59}>
@@ -90,51 +105,47 @@ const HomePage = (props) => {
                     </FlexDiv>
                 </TextContainer>
            </ContentBox>
-            <ImageContainer>
-                <Gallery spacing={420} size={200}>
-                    <img src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
-                    <img src='https://dummyimage.com/1920x1080/ff0000/fff'/>
-                    <img src='https://dummyimage.com/1920x1080/00ccff/fff'/>
-                    <img src='https://dummyimage.com/1920x1080/00ff73/fff'/>
-                    <img src='https://dummyimage.com/1920x1080/ccff00/fff'/>
-                    <img src='https://dummyimage.com/1920x1080/ffb700/fff'/>
-                </Gallery>
-            </ImageContainer>
+                <ImageContainer showContent={pageY <= pageHeight/2}>
+                    <Gallery spacing={420} size={200}>
+                        <img src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
+                        <img src='https://dummyimage.com/1920x1080/ff0000/fff'/>
+                        <img src='https://dummyimage.com/1920x1080/00ccff/fff'/>
+                        <img src='https://dummyimage.com/1920x1080/00ff73/fff'/>
+                        <img src='https://dummyimage.com/1920x1080/ccff00/fff'/>
+                        <img src='https://dummyimage.com/1920x1080/ffb700/fff'/>
+                    </Gallery>
+                </ImageContainer>   
             </HeightContainer>
 
-            <HeightContainer>
-            <ContentBox>
-                <Text color='#CDCDCD' size={59}>
-                    Watch unlimited videos from a variety platforms                
-                </Text>
-            </ContentBox>
-            <ImageContainer>
-                <Gallery spacing={420} size={200}>
-                    <img src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
-                    <img src='https://dummyimage.com/1920x1080/ff0000/fff'/>
-                    <img src='https://dummyimage.com/1920x1080/00ccff/fff'/>
-                    <img src='https://dummyimage.com/1920x1080/00ff73/fff'/>
-                    <img src='https://dummyimage.com/1920x1080/ccff00/fff'/>
-                    <img src='https://dummyimage.com/1920x1080/ffb700/fff'/>
-                </Gallery>
-            </ImageContainer>            </HeightContainer>
+
+            {/*  Hero 2  */}
+            <HeightContainer showContent={pageY >= pageHeight/2 && pageY <= pageHeight} style={{marginTop: '-75vh'}}>
+                <ContentBox showContent={pageY >= pageHeight/2 && pageY <= pageHeight}>
+                    <TextContainer>
+                        <Text color='#CDCDCD' size={59}>
+                            Watch unlimited videos from a variety platforms                
+                        </Text>
+                    </TextContainer>
+                </ContentBox>
+                <ImageContainer showContent={pageY >= pageHeight/2 && pageY <= pageHeight} style={{marginTop: '-100vh'}}>
+                    <img style={{height: '400px'}} src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
+                </ImageContainer>           
+            </HeightContainer>
             
-            <HeightContainer>
-            <ContentBox>
-                <Text color='#CDCDCD' size={59}>
-                    Watch on any device              
-                </Text>
-            </ContentBox>
-            <ImageContainer>
-                <Gallery spacing={420} size={200}>
-                    <img src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
-                    <img src='https://dummyimage.com/1920x1080/ff0000/fff'/>
-                    <img src='https://dummyimage.com/1920x1080/00ccff/fff'/>
-                    <img src='https://dummyimage.com/1920x1080/00ff73/fff'/>
-                    <img src='https://dummyimage.com/1920x1080/ccff00/fff'/>
-                    <img src='https://dummyimage.com/1920x1080/ffb700/fff'/>
-                </Gallery>
-            </ImageContainer>            </HeightContainer>
+
+            {/*  Hero 3  */}
+            <HeightContainer showContent={pageY >= pageHeight} style={{marginTop: '-100vh', height: 'auto'}}>
+                <ContentBox showContent={pageY >= pageHeight}>
+                    <TextContainer>
+                        <Text color='#CDCDCD' size={59}>
+                            Watch on any device              
+                        </Text>  
+                    </TextContainer>
+                </ContentBox>
+                <ImageContainer showContent={pageY >= pageHeight} style={{marginTop: '-100vh'}}>
+                    <img style={{height: '400px'}} src='https://dummyimage.com/1920x1080/ff0000/0011ff'/>
+                </ImageContainer>            
+            </HeightContainer>
             <NavBar />
         </FlexDiv>
     )
