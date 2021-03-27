@@ -14,6 +14,8 @@ const HeightContainer = styled(FlexDiv)`
     width: 100%;
     flex-direction: row;
     margin-top: 100px;
+    justify-content: center;
+    margin-top: ${props => props.marginTop || 'initial'};
 
     // Alternate image position
     &:nth-child(2) {
@@ -24,6 +26,7 @@ const HeightContainer = styled(FlexDiv)`
     @media(max-width: 1050px) {
         // Put image under content
         flex-direction: column;
+        align-items: center;
 
         // Don't alternate image position
         &:nth-child(2) {
@@ -47,10 +50,14 @@ const ContentBox = styled(FlexDiv)`
     text-align: center;
     animation: 500ms ${fadeIn} ease-in;
     opacity: ${props => props.showContent ? '1' : '0'};
-    transition: 500ms;
+    transition: 400ms;
 
     // Mobile: Remove 'sticky' effect
     @media(max-width: 1050px) {
+        // Dont fade in on mobile
+        opacity: 1;
+
+        height: auto;
         position: initial;
     }
 `;
@@ -63,11 +70,12 @@ const ImageContainer = styled(FlexDiv)`
     height: 75vh;
     width: 50%;
     opacity: ${props => props.showContent ? '1' : '0'};
-    transition: 500ms;
+    margin-top: ${props => props.marginTop || 'initial'};
+    transition: 400ms;
 `;
 
 
-const HomePage = (props) => {
+const HomePage = () => {
     const [pageY, setPageY] = useState(false);
     const pageHeight = window.outerHeight;
 
@@ -81,8 +89,8 @@ const HomePage = (props) => {
 
 
             {/*  Hero 1  */}
-            <HeightContainer showContent={pageY <= pageHeight/2}>
-            <ContentBox showContent={pageY <= pageHeight/2}>
+            <HeightContainer style={{paddingTop: '50px'}}>
+            <ContentBox showContent={pageY < pageHeight / 2.5}>
                 <TextContainer>
                     <Logo size={50}/>
                     <Text color='#CDCDCD' size={59}>
@@ -105,7 +113,7 @@ const HomePage = (props) => {
                     </FlexDiv>
                 </TextContainer>
            </ContentBox>
-                <ImageContainer showContent={pageY <= pageHeight/2}>
+                <ImageContainer showContent={pageY < pageHeight/2.5}>
                     <Gallery spacing={420} size={200}>
                         <img src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
                         <img src='https://dummyimage.com/1920x1080/ff0000/fff'/>
@@ -119,22 +127,22 @@ const HomePage = (props) => {
 
 
             {/*  Hero 2  */}
-            <HeightContainer showContent={pageY >= pageHeight/2 && pageY <= pageHeight} style={{marginTop: '-75vh'}}>
-                <ContentBox showContent={pageY >= pageHeight/2 && pageY <= pageHeight}>
+            <HeightContainer marginTop='-75vh'>
+                <ContentBox showContent={pageY >= pageHeight/2.5 && pageY < pageHeight}>
                     <TextContainer>
                         <Text color='#CDCDCD' size={59}>
                             Watch unlimited videos from a variety platforms                
                         </Text>
                     </TextContainer>
                 </ContentBox>
-                <ImageContainer showContent={pageY >= pageHeight/2 && pageY <= pageHeight} style={{marginTop: '-100vh'}}>
+                <ImageContainer showContent={pageY >= pageHeight/2.5 && pageY < pageHeight} marginTop='-100vh'>
                     <img style={{height: '400px'}} src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
                 </ImageContainer>           
             </HeightContainer>
             
 
             {/*  Hero 3  */}
-            <HeightContainer showContent={pageY >= pageHeight} style={{marginTop: '-100vh', height: 'auto'}}>
+            <HeightContainer marginTop='-100vh' style={{height: 'auto'}}>
                 <ContentBox showContent={pageY >= pageHeight}>
                     <TextContainer>
                         <Text color='#CDCDCD' size={59}>
@@ -142,7 +150,7 @@ const HomePage = (props) => {
                         </Text>  
                     </TextContainer>
                 </ContentBox>
-                <ImageContainer showContent={pageY >= pageHeight} style={{marginTop: '-100vh'}}>
+                <ImageContainer showContent={pageY >= pageHeight} marginTop='-100vh'>
                     <img style={{height: '400px'}} src='https://dummyimage.com/1920x1080/ff0000/0011ff'/>
                 </ImageContainer>            
             </HeightContainer>
