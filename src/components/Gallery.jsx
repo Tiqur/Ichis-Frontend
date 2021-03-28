@@ -12,6 +12,7 @@ const Container = styled.div`
   margin: 0 auto;
   position: relative;
   perspective: 1000px;
+  width: 100%;
   animation: 500ms ${fadeIn} ease-in;
 `;
 
@@ -31,6 +32,7 @@ const Carousel = styled(FlexDiv)`
 
   // Mobile
   @media(max-width: 1050px) {
+    margin-top: 80px;
     transform: rotateY(${props => props.degY}deg);
   }
 `;
@@ -58,7 +60,8 @@ const ImageDiv = styled.img`
     @media(max-width: 1050px) {
         transform: rotateY(${props => props.degY}deg) translateZ(${props => props.translateZ || 0}px);
         opacity: ${props => props.main ? '1' : '0'};
-        height: ${props => props.main ? props.size - 75 : '0'}px;
+        height: auto;
+        max-width: 46%;
     }
 
 `;

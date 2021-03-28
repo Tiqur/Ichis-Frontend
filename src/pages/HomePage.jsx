@@ -109,7 +109,7 @@ const HomePage = () => {
                     <Text color='#8A8585' size={30}>
                         Ichis is a minimalistic video player designed to deliver <br/>crystal clear, synchronized audio and video to<br/>numerous users at once.
                     </Text>
-                    <FlexDiv direction='row' style={{justifyContent: 'center'}}>
+                    <FlexDiv direction='row' style={{justifyContent: window.outerWidth > 700 ? 'center' : 'space-between'}}>
                         <Button backgroundColor='#6C63FF' hoverColor='#4b43e6' radius={76} width={180} height={60} function={() => {console.log("Create Room")}}>
                             <Text weight='bold' color='#e1e1e1' dontSelect>
                                 Create Room
@@ -146,7 +146,7 @@ const HomePage = () => {
                     </TextContainer>
                 </ContentBox>
                 <ImageContainer showContent={pageY >= pageHeight/2.5 && pageY < pageHeight} marginTop='-100vh'>
-                    <img style={{height: 'auto', maxWidth: '100%'}} src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
+                    <img style={{height: 'auto', maxWidth: '80%'}} src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
                 </ImageContainer>           
             </HeightContainer>
             
@@ -161,7 +161,7 @@ const HomePage = () => {
                     </TextContainer>
                 </ContentBox>
                 <ImageContainer showContent={pageY >= pageHeight} marginTop='-100vh'>
-                    <img style={{height: 'auto', maxWidth: '100%'}} src='https://dummyimage.com/1920x1080/ff0000/0011ff'/>
+                    <img style={{height: 'auto', maxWidth: '80%'}} src='https://dummyimage.com/1920x1080/ff0000/0011ff'/>
                 </ImageContainer>            
             </HeightContainer>
             <NavBar />
