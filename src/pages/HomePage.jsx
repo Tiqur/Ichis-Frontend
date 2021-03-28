@@ -27,7 +27,8 @@ const HeightContainer = styled(FlexDiv)`
         // Put image under content
         flex-direction: column;
         align-items: center;
-        margin-top: initial;
+        margin-top: 100px;
+        height: 100vh;
         
         // Don't alternate image position
         &:nth-child(2) {
@@ -77,6 +78,7 @@ const ImageContainer = styled(FlexDiv)`
 
     @media(max-width: 1050px) {
         margin-top: initial;
+        position: initial;
         opacity: 1;
         width: 100%;
     }
