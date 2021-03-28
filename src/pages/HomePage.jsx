@@ -57,7 +57,8 @@ const ContentBox = styled(FlexDiv)`
     @media(max-width: 1050px) {
         // Dont fade in on mobile
         opacity: 1;
-
+        
+        width: 100%;
         height: auto;
         position: initial;
     }
@@ -77,6 +78,7 @@ const ImageContainer = styled(FlexDiv)`
     @media(max-width: 1050px) {
         margin-top: initial;
         opacity: 1;
+        width: 100%;
     }
 `;
 
