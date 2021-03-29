@@ -1,6 +1,6 @@
 import './index.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage/HomePage';
 import NotFoundPage from './pages/NotFoundPage'
 import Layout from './components/Layout';
 
