@@ -67,7 +67,6 @@ const ImageDiv = styled.img`
 `;
 
 const Gallery = (props) => {
-
     const children = props.children;
     const [currentDegrees, setCurrentDegrees] = useState(0);
     const degreesY = 360 / children.length;

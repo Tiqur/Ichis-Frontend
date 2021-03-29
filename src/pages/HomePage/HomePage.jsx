@@ -4,9 +4,9 @@ import Text from '../../components/Text';
 import Gallery from '../../components/Gallery';
 import TextContainer from '../../components/TextContainer';
 import Logo from '../../components/Logo';
-import Button from '../../components/Button';
+import Button from '../../components/Button/Button';
 import { useEffect, useState } from 'react';
-import './HomePage.scss';
+import styles from'./HomePage.module.scss';
 
 
 const HomePage = () => {
@@ -23,8 +23,8 @@ const HomePage = () => {
 
 
             {/*  Hero 1  */}
-            <FlexDiv className='height-container' style={{paddingTop: '50px', marginTop: '100px'}}>
-            <FlexDiv className='content-box' style={{opacity: +(pageY < pageHeight / 2.5)}}>
+            <FlexDiv className={styles.height_container} style={{paddingTop: '50px', marginTop: '100px'}}>
+            <FlexDiv className={styles.content_box} style={{opacity: +(pageY < pageHeight / 2.5)}}>
                 <TextContainer>
                     <Logo size={50}/>
                     <Text color='#CDCDCD' size={7}>
@@ -34,12 +34,12 @@ const HomePage = () => {
                         Ichis is a minimalistic video player designed to deliver <br/>crystal clear, audio and video to<br/>numerous users at once.
                     </Text>
                     <FlexDiv direction='row' style={{justifyContent: 'center'}}>
-                        <Button backgroundColor='#6C63FF' hoverColor='#4b43e6' radius={76} function={() => {console.log("Create Room")}}>
+                        <Button isMain style={{margin: '30px'}} function={() => {console.log("Create Room")}}>
                         <Text weight='bold' color='#e1e1e1' dontSelect size={2.5}>
                                 Create Room
                             </Text>
                         </Button>                        
-                        <Button backgroundColor='#44474C' hoverColor='#34373c' radius={76} function={() => {console.log("Download")}}>
+                        <Button style={{margin: '30px'}} function={() => {console.log("Download")}}>
                             <Text weight='bold' color='#e1e1e1' dontSelect size={2.5}>
                                 Download
                             </Text>
@@ -47,7 +47,7 @@ const HomePage = () => {
                     </FlexDiv>
                 </TextContainer>
            </FlexDiv>
-                <FlexDiv className='image-container' style={{opacity: +(pageY < pageHeight/2.5), marginTop: 'initial'}}>
+                <FlexDiv className={styles.image_container} style={{opacity: +(pageY < pageHeight/2.5), marginTop: 'initial'}}>
                     <Gallery spacing={420} size={200}>
                         <img src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
                         <img src='https://dummyimage.com/1920x1080/ff0000/fff'/>
@@ -61,30 +61,30 @@ const HomePage = () => {
 
 
             {/*  Hero 2  */}
-            <FlexDiv className='height-container' style={{marginTop: '-75vh'}}>
-                <FlexDiv className='content-box' style={{opacity: +(pageY >= pageHeight / 2.5 && pageY < pageHeight)}}>
+            <FlexDiv className={styles.height_container} style={{marginTop: '-75vh'}}>
+                <FlexDiv className={styles.content_box} style={{opacity: +(pageY >= pageHeight / 2.5 && pageY < pageHeight)}}>
                     <TextContainer>
                         <Text color='#CDCDCD' size={5}>
                             Watch unlimited videos from a variety platforms                
                         </Text>
                     </TextContainer>
                 </FlexDiv>
-                <FlexDiv className='image-container' style={{opacity: +(pageY >= pageHeight / 2.5 && pageY < pageHeight), marginTop: '-100vh'}}>
+                <FlexDiv className={styles.image_container} style={{opacity: +(pageY >= pageHeight / 2.5 && pageY < pageHeight), marginTop: '-100vh'}}>
                     <img style={{height: 'auto', maxWidth: '80%'}} src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
                 </FlexDiv>           
             </FlexDiv>
             
 
             {/*  Hero 3  */}
-            <FlexDiv className='height-container' style={{height: 'auto', marginTop: '-100vh'}}>
-                <FlexDiv className='content-box' style={{opacity: +(pageY >= pageHeight)}}>
+            <FlexDiv className={styles.height_container} style={{height: 'auto', marginTop: '-100vh'}}>
+                <FlexDiv className={styles.content_box} style={{opacity: +(pageY >= pageHeight)}}>
                     <TextContainer>
                         <Text color='#CDCDCD' size={5}>
                             Watch on any device              
                         </Text>  
                     </TextContainer>
                 </FlexDiv>
-                <FlexDiv className='image-container' style={{opacity: +(pageY >= pageHeight), marginTop: '-100vh'}}>
+                <FlexDiv className={styles.image_container} style={{opacity: +(pageY >= pageHeight), marginTop: '-100vh'}}>
                     <img style={{height: 'auto', maxWidth: '80%'}} src='https://dummyimage.com/1920x1080/ff0000/0011ff'/>
                 </FlexDiv>            
             </FlexDiv>
