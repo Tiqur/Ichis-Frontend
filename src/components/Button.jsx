@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import FlexDiv from '../components/FlexDiv';
 
 const Container = styled(FlexDiv)`
-    height: ${props => props.height}px;
-    width: ${props => props.width}px;
+    height: auto;
+    width: auto;
+    padding: 5px 15px 5px 15px;
     background: ${props => props.backgroundColor};
     color: ${props => props.textColor};
     border-radius: ${props => props.radius}px;

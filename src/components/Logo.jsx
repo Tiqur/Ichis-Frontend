@@ -57,7 +57,7 @@ const Logo = (props) => {
 
     return (
         <Container>
-            <Text size={40} font='Sriracha' style={{marginLeft: '30px'}}>Ichis</Text>
+            <Text size={5} font='Sriracha' style={{marginLeft: '30px'}}>Ichis</Text>
             <Square height={s1h} size={props.size} color='#6C63FF' ref={sr1}/>
             <Square height={s2h}  size={props.size} color='#6C63FF' ref={sr2}/>
             <Square height={s3h} size={props.size} color='#6C63FF' ref={sr3}/>

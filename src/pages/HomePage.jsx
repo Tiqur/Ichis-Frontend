@@ -15,9 +15,12 @@ const HeightContainer = styled(FlexDiv)`
     min-height: 150vh;
     width: 100%;
     flex-direction: row;
-    margin-top: 100px;
     justify-content: center;
     margin-top: ${props => props.marginTop || 'initial'};
+
+    &:first-child {
+        margin-top: 100px;
+    }
 
     // Alternate image position
     &:nth-child(2) {
@@ -29,12 +32,16 @@ const HeightContainer = styled(FlexDiv)`
         // Put image under content
         flex-direction: column;
         align-items: center;
-        margin-top: 100px;
         min-height: 100vh;
-        
+        margin-top: 0px;
+
         // Don't alternate image position
         &:nth-child(2) {
             flex-direction: column;
+        }
+
+        &:first-child {
+            margin-top: 100px;
         }
     }
 `;
@@ -105,20 +112,20 @@ const HomePage = () => {
             <ContentBox showContent={pageY < pageHeight / 2.5}>
                 <TextContainer>
                     <Logo size={50}/>
-                    <Text color='#CDCDCD' size={59}>
+                    <Text color='#CDCDCD' size={5}>
                         Perfectly synchronized video for everyone                
                     </Text>
-                    <Text color='#8A8585' size={30}>
+                    <Text color='#8A8585' size={3}>
                         Ichis is a minimalistic video player designed to deliver <br/>crystal clear, audio and video to<br/>numerous users at once.
                     </Text>
                     <FlexDiv direction='row' style={{justifyContent: 'center'}}>
-                        <Button backgroundColor='#6C63FF' hoverColor='#4b43e6' radius={76} width={180} height={60} function={() => {console.log("Create Room")}}>
-                            <Text weight='bold' color='#e1e1e1' dontSelect>
+                        <Button backgroundColor='#6C63FF' hoverColor='#4b43e6' radius={76} function={() => {console.log("Create Room")}}>
+                        <Text weight='bold' color='#e1e1e1' dontSelect size={2.5}>
                                 Create Room
                             </Text>
                         </Button>                        
-                        <Button backgroundColor='#44474C' hoverColor='#34373c' radius={76} width={130} height={60} function={() => {console.log("Download")}}>
-                            <Text weight='bold' color='#e1e1e1' dontSelect>
+                        <Button backgroundColor='#44474C' hoverColor='#34373c' radius={76} function={() => {console.log("Download")}}>
+                            <Text weight='bold' color='#e1e1e1' dontSelect size={2.5}>
                                 Download
                             </Text>
                         </Button>
@@ -142,7 +149,7 @@ const HomePage = () => {
             <HeightContainer marginTop='-75vh'>
                 <ContentBox showContent={pageY >= pageHeight/2.5 && pageY < pageHeight}>
                     <TextContainer>
-                        <Text color='#CDCDCD' size={59}>
+                        <Text color='#CDCDCD' size={5}>
                             Watch unlimited videos from a variety platforms                
                         </Text>
                     </TextContainer>
@@ -157,7 +164,7 @@ const HomePage = () => {
             <HeightContainer marginTop='-100vh' style={{height: 'auto'}}>
                 <ContentBox showContent={pageY >= pageHeight}>
                     <TextContainer>
-                        <Text color='#CDCDCD' size={59}>
+                        <Text color='#CDCDCD' size={5}>
                             Watch on any device              
                         </Text>  
                     </TextContainer>
