@@ -1,3 +1,5 @@
+// This is very messy because I forgot to start with mobile :/
+
 import styled from 'styled-components';
 import FlexDiv from '../components/FlexDiv';
 import NavBar from '../components/NavBar';
@@ -10,7 +12,7 @@ import { keyframes } from 'styled-components';
 import { useEffect, useState } from 'react';
 
 const HeightContainer = styled(FlexDiv)`
-    height: 150vh;
+    min-height: 150vh;
     width: 100%;
     flex-direction: row;
     margin-top: 100px;
@@ -28,7 +30,7 @@ const HeightContainer = styled(FlexDiv)`
         flex-direction: column;
         align-items: center;
         margin-top: 100px;
-        height: 100vh;
+        min-height: 100vh;
         
         // Don't alternate image position
         &:nth-child(2) {
@@ -107,9 +109,9 @@ const HomePage = () => {
                         Perfectly synchronized video for everyone                
                     </Text>
                     <Text color='#8A8585' size={30}>
-                        Ichis is a minimalistic video player designed to deliver <br/>crystal clear, synchronized audio and video to<br/>numerous users at once.
+                        Ichis is a minimalistic video player designed to deliver <br/>crystal clear, audio and video to<br/>numerous users at once.
                     </Text>
-                    <FlexDiv direction='row' style={{justifyContent: window.outerWidth > 700 ? 'center' : 'space-between'}}>
+                    <FlexDiv direction='row' style={{justifyContent: 'center'}}>
                         <Button backgroundColor='#6C63FF' hoverColor='#4b43e6' radius={76} width={180} height={60} function={() => {console.log("Create Room")}}>
                             <Text weight='bold' color='#e1e1e1' dontSelect>
                                 Create Room

@@ -5,6 +5,7 @@ import Text from '../components/Text';
 
 const Container = styled(FlexDiv)`
     justify-content: center;
+    vertical-align: top;
     align-items: center;
     margin-bottom: -50px;
     height: 100px;

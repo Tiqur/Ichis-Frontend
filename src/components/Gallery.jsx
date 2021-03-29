@@ -13,6 +13,7 @@ const Container = styled.div`
   position: relative;
   perspective: 1000px;
   width: 100%;
+  height: 75vh;
   animation: 500ms ${fadeIn} ease-in;
 `;
 
@@ -32,7 +33,6 @@ const Carousel = styled(FlexDiv)`
 
   // Mobile
   @media(max-width: 1050px) {
-    margin-top: 80px;
     transform: rotateY(${props => props.degY}deg);
   }
 `;
