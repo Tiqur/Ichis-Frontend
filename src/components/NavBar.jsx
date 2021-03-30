@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import FlexDiv from './FlexDiv';
 import GithubIcon from '../assets/github-icon.png'
 import HamburgerIcon from './HamburgerIcon';
-import Drawer from './Drawer';
+import Drawer from './Drawer/Drawer';
 import { useEffect, useState } from 'react';
 
 
@@ -23,6 +23,7 @@ const InternalContainer = styled(FlexDiv)`
     flex-direction: row;
     width: 80%;
     height: 80px;
+    z-index: 9999;
     justify-content: center;
 `;
 
