@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import FlexDiv from './FlexDiv';
+import FlexDiv from './FlexDiv/FlexDiv';
 import GithubIcon from '../assets/github-icon.png'
 import HamburgerIcon from './HamburgerIcon';
 import Drawer from './Drawer/Drawer';

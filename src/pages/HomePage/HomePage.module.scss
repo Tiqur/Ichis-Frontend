@@ -6,13 +6,12 @@
     to { transform: translateY(0px); opacity: 1; }
 }
 
-
 .height_container {
     min-height: 150vh;
     width: 100%;
     flex-direction: row;
     justify-content: center;
-
+    
     // Alternate image position
     &:nth-child(2) {
         flex-direction: row-reverse !important;

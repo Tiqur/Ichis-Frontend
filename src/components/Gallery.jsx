@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import FlexDiv from './FlexDiv';
+import FlexDiv from './FlexDiv/FlexDiv';
 import { useState } from 'react';
 import { keyframes } from 'styled-components';
 

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import FlexDiv from './FlexDiv';
+import FlexDiv from './FlexDiv/FlexDiv';
 import Text from '../components/Text';
 
 const Container = styled(FlexDiv)`

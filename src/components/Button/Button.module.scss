@@ -17,8 +17,8 @@
 
 .main_button {
     @extend .button;
-    background: #6C63FF;
+    background: #6C63FF !important;
     &:hover {
-        background: #534ce1;
+        background: #534ce1 !important;
     }
 }

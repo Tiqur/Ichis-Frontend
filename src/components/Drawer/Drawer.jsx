@@ -1,4 +1,4 @@
-import FlexDiv from '../FlexDiv';
+import FlexDiv from '../FlexDiv/FlexDiv';
 import styles from './Drawer.module.scss'
 
 
