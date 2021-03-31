@@ -4,6 +4,7 @@ import FlexDiv from './FlexDiv/FlexDiv';
 const Container = styled(FlexDiv)`
     flex-direction: column;
     width: 100%;
+    justify-content: flex-start;
 `;
 
 const TextContainer = (props) => {

@@ -9,19 +9,21 @@ body {
 $directions: (top, bottom, right, left);
 
 @each $direction in $directions {
-  @for $i from 0 through 50 {
-     .m-#{$direction}#{$i*4} { margin-#{$direction}: #{$i*4}px !important; }
-     .-m-#{$direction}#{$i*4} { margin-#{$direction}: #{$i*-4}px !important; }
-     .p-#{$direction}#{$i*4} { padding-#{$direction}: #{$i*4}px !important; }
-     .-p-#{$direction}#{$i*4} { padding-#{$direction}: #{$i*-4}px !important; }
+  @for $i from 0 through 60 {
+     .m-#{$direction}#{$i*5}px { margin-#{$direction}: #{$i*5}px !important; }
+     .m-#{$direction}#{$i*5}vh { margin-#{$direction}: #{$i*5}vh !important; }
+     .m-#{$direction}#{$i*5}vw { margin-#{$direction}: #{$i*5}vw !important; }
+     .p-#{$direction}#{$i*5}px { padding-#{$direction}: #{$i*5}px !important; }
   }
 }
   
 @for $i from 0 through 150 {
-     .margin#{$i*4}p { margin: #{$i*4}px !important; }
-     .height#{$i*4}p { height: #{$i*4}px !important; }
-     .width#{$i*4}p  { width:  #{$i*4}px !important; }
+     .margin#{$i*5}px { margin: #{$i*5}px !important; }
+     .height#{$i*5}px { height: #{$i*5}px !important; }
+     .width#{$i*5}px  { width:  #{$i*5}px !important; }
 }
+
+.height_auto { height: auto !important }
 
 .text_align_center { text-align: center !important; }
 
@@ -33,6 +35,6 @@ $directions: (top, bottom, right, left);
 .width100 { width: 100% !important };
 .width50 { width: 50% !important };
 
-.margin-top-init {margin-top: initial !important };
+.margin_top_init {margin-top: initial !important };
 
 .transparent {opacity: 0 !important; }

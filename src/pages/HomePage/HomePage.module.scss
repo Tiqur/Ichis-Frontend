@@ -7,7 +7,7 @@
 }
 
 .height_container {
-    min-height: 150vh;
+    height: 100vh;
     width: 100%;
     flex-direction: row;
     justify-content: center;
@@ -22,16 +22,15 @@
         // Put image under content
         flex-direction: column;
         align-items: center;
-        min-height: 100vh;
         margin-top: 0px !important;
-
+        position: relative;
         // Don't alternate image position
         &:nth-child(2) {
             flex-direction: column !important;
         }
 
         &:first-child {
-            margin-top: 100px !important;
+            margin-top: 25vh !important;
         }
     }
 }
@@ -47,20 +46,16 @@
     animation: 500ms fadeIn ease-in;
     transition: 400ms;
 
-    // Mobile: Remove 'sticky' effect
     @media(max-width: 1050px) {
         // Dont fade in on mobile
         opacity: 1 !important;
         
         width: 100% !important;
-        height: auto !important;
-        position: initial !important;
     }
 }
 
 .image_container {
     justify-content: center;
-    position: sticky;
     top: 100px;
     align-items: center;
     height: 75vh;
@@ -68,8 +63,6 @@
     transition: 400ms;
 
     @media(max-width: 1050px) {
-        margin-top: initial !important;
-        position: initial !important;
         opacity: 1 !important;
         width: 100% !important;
     }
