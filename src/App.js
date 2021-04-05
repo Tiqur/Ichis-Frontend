@@ -1,8 +1,9 @@
 import './index.scss';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
-import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import Layout from './components/Layout';
+import Dashboard from './pages/DashboardPage/DashboardPage';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/dashboard" />
+          <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/profile" />
           <Route component={NotFoundPage} />
         </Switch>

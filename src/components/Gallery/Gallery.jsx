@@ -13,7 +13,7 @@ const Gallery = (props) => {
     const width = window.innerWidth;
     const widthNormal = width <= 2150 && width > 1050;
     let rotateTimeout = null;
-  
+
     // Auto rotate gallery
     const startAutoRotate = () => {
         rotateTimeout = setTimeout(() => {
