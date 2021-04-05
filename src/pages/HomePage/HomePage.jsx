@@ -1,7 +1,7 @@
 import FlexDiv from '../../components/FlexDiv/FlexDiv';
 import NavBar from '../../components/NavBar';
 import Text from '../../components/Text';
-import Gallery from '../../components/Gallery';
+import Gallery from '../../components/Gallery/Gallery';
 import TextContainer from '../../components/TextContainer';
 import Logo from '../../components/Logo';
 import Button from '../../components/Button/Button';
@@ -49,7 +49,7 @@ const HomePage = () => {
                 </TextContainer>
            </FlexDiv>
                 <FlexDiv className={cn(styles.image_container, {transparent: !(pageY < pageHeight / 2.5)})}>
-                    <Gallery spacing={420} size={200}>
+                    <Gallery spacing={420}>
                         <img src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
                         <img src='https://dummyimage.com/1920x1080/ff0000/fff'/>
                         <img src='https://dummyimage.com/1920x1080/00ccff/fff'/>

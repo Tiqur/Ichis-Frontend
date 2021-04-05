@@ -1,0 +1,49 @@
+$degY: 60deg;
+$size: 200px;
+$spacing: 420px;
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.container {
+  margin: 0;
+  position: relative;
+  perspective: 1000px;
+  width: 100%;
+  height: 75vh;
+  animation: 500ms fadeIn ease-in;
+
+  & div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: 800ms;
+
+    & img {
+      display: block;
+      position: absolute;
+      height: $size;
+      margin: 0px 5px 0px 5px;
+      transition: 300ms;
+      opacity: 0.2;
+      user-select: none;
+
+      @media(max-width: 1050px) {
+        height: auto;
+        max-width: 46%;
+        opacity: 0;
+      }
+
+      &.main {
+        opacity: 1;
+      }
+    }
+  }
+}
+
