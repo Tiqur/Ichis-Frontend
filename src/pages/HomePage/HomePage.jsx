@@ -2,7 +2,7 @@ import FlexDiv from '../../components/FlexDiv/FlexDiv';
 import NavBar from '../../components/NavBar';
 import Text from '../../components/Text';
 import Gallery from '../../components/Gallery/Gallery';
-import TextContainer from '../../components/TextContainer';
+import CenterVertically from '../../components/CenterVertically/CenterVertically';
 import Logo from '../../components/Logo';
 import Button from '../../components/Button/Button';
 import { useEffect, useState } from 'react';
@@ -26,7 +26,7 @@ const HomePage = () => {
             {/*  Hero 1  */}
             <FlexDiv className={cn(styles.height_container, 'p-top50px')}>
             <FlexDiv className={cn(styles.content_box)}>
-                <TextContainer>
+                <CenterVertically>
                     <Logo size={50}/>
                     <Text color='#CDCDCD' size={7}>
                         Perfectly synchronized video for everyone                
@@ -46,7 +46,7 @@ const HomePage = () => {
                             </Text>
                         </Button>
                     </FlexDiv>
-                </TextContainer>
+                </CenterVertically>
            </FlexDiv>
                 <FlexDiv className={cn(styles.image_container, {transparent: !(pageY < pageHeight / 2.5)})}>
                     <Gallery spacing={420}>
@@ -64,11 +64,11 @@ const HomePage = () => {
             {/*  Hero 2  */}
             <FlexDiv className={cn(styles.height_container)}>
                 <FlexDiv className={cn(styles.content_box)}>
-                    <TextContainer>
+                    <CenterVertically>
                         <Text color='#CDCDCD' size={5}>
                             Watch unlimited videos from a variety platforms                
                         </Text>
-                    </TextContainer>
+                    </CenterVertically>
                 </FlexDiv>
                 <FlexDiv className={cn(styles.image_container, {transparent: !(pageY >= pageHeight/2.5 && pageY < pageHeight*1.5)})}>
                     <img style={{height: 'auto', maxWidth: '80%'}} src='https://dummyimage.com/1920x1080/ff00ff/0011ff'/>
@@ -79,11 +79,11 @@ const HomePage = () => {
             {/*  Hero 3  */}
             <FlexDiv className={cn(styles.height_container, 'height_auto')}>
                 <FlexDiv className={cn(styles.content_box)}>
-                    <TextContainer>
+                    <CenterVertically>
                         <Text color='#CDCDCD' size={5}>
                             Watch on any device              
                         </Text>  
-                    </TextContainer>
+                    </CenterVertically>
                 </FlexDiv>
                 <FlexDiv className={cn(styles.image_container, {transparent: (pageY < pageHeight*1.5)})}>
                     <img style={{height: 'auto', maxWidth: '80%'}} src='https://dummyimage.com/1920x1080/ff0000/0011ff'/>
