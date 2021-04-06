@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 
 
 const NavContainer = styled(FlexDiv)`
+    top: 0;
     flex-direction: row;
     align-items: center;
     background: #121212;
@@ -19,6 +20,7 @@ const NavContainer = styled(FlexDiv)`
 `;
 
 const InternalContainer = styled(FlexDiv)`
+    top: 0;
     position: fixed;
     flex-direction: row;
     width: 80%;
