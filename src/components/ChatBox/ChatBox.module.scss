@@ -5,18 +5,24 @@
 
 .inputBoxContainer {
   flex-direction: column-reverse;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
 }
 
 .messageContainer {
-  height: calc(100% - 20px);
-  width: 90%;
+  height: calc(100% - 1em);
+  width: 100%;
   margin-bottom: 20px;
 }
 
 .inputBox {
-  width: 90%;
+  width: calc(100% - 2.5em);
   height: 2em;
   background: #393939;
+}
+
+.iconContainer {
+  @extend .inputBox;
+  background: rgba(0, 0, 0, 0);
 }

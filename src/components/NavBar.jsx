@@ -15,7 +15,8 @@ const NavContainer = styled(FlexDiv)`
     position: fixed;
     left: 0;
     width: 100%;
-    height: 80px;
+background: red;
+    height: 3em;
     filter: ${props => props.scrolled ? 'drop-shadow(0px 0px 4px #000000)' : ''};
 `;
 
@@ -24,7 +25,7 @@ const InternalContainer = styled(FlexDiv)`
     position: fixed;
     flex-direction: row;
     width: 80%;
-    height: 80px;
+    height: 3em;
     z-index: 9999;
     justify-content: center;
 `;
@@ -46,7 +47,7 @@ const NavBar = (props) => {
             <InternalContainer>
             <HamburgerIcon drawerState={[drawerIsOpen, setDrawerOpen]} />
             <a style={{marginLeft: 'auto', right: "8px", height: "52px", userSelect: 'none'}} href='https://github.com/Tiqur/ichis-frontend'>
-                <img src={GithubIcon} style={{height: "52px", marginTop: '18px'}}/>
+                <img src={GithubIcon} style={{height: "2em", marginTop: '0.5em'}}/>
             </a>
             <Drawer show={drawerIsOpen} />
             </InternalContainer>

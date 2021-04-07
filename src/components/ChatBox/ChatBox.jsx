@@ -10,6 +10,9 @@ const InputMessage = () => {
       <FlexDiv className={cn(styles.inputBox)}>
         
       </FlexDiv>
+      <FlexDiv className={cn(styles.iconContainer)}>
+        
+      </FlexDiv>
     </FlexDiv>
   )
 }
