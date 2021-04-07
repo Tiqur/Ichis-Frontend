@@ -33,6 +33,7 @@ const Triangle = styled.div`
 `;
 
 const AnimateSquares = (ref, h) => {
+    if (!ref) return;
     const height = 50;
     ref.style.transform = `translateX(${h+24}px) translateY(${-4-height}px) rotateZ(0deg)`;
     setTimeout(() => {
