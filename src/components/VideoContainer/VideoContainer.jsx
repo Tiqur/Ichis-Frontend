@@ -6,7 +6,6 @@ const VideoContainer = () => {
 
   return (
     <div className={cn(styles.container)}>
-      <div>  </div>
     </div>
   )
 }

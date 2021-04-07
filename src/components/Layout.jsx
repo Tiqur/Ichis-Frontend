@@ -4,6 +4,7 @@ import FlexDiv from './FlexDiv/FlexDiv';
 
 const LayoutContainer = styled(FlexDiv)`
     height: auto;
+    width: 100vw;
     justify-content: center;
 `;
 

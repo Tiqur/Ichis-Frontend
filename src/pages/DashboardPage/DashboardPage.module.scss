@@ -1,0 +1,15 @@
+.page_grid_layout {
+  display: grid;
+  width: 100vw;
+  height: calc(100vh - 100px);
+  margin-top: 80px;
+  margin-bottom: 20px;
+  grid-gap: 20px;
+
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+  "video"
+  "chat";
+}
+
+
