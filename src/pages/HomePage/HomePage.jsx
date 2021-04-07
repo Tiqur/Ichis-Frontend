@@ -6,6 +6,7 @@ import CenterVertically from '../../components/CenterVertically/CenterVertically
 import Logo from '../../components/Logo';
 import Button from '../../components/Button/Button';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from'./HomePage.module.scss';
 import classNames from 'classnames';
 import '../../index.scss';
@@ -35,16 +36,20 @@ const HomePage = () => {
                         Ichis is a minimalistic video player designed to deliver <br/>crystal clear, audio and video to<br/>numerous users at once.
                     </Text>
                     <FlexDiv justifyCenter row>
-                        <Button isMain className='m-right30px' function={() => {console.log("Create Room")}}>
-                        <Text weight='bold' color='#e1e1e1' dontSelect size={2.5}>
-                                Create Room
-                            </Text>
-                        </Button>                        
-                        <Button className='m-left30px' function={() => {console.log("Download")}}>
-                            <Text weight='bold' color='#e1e1e1' dontSelect size={2.5}>
-                                Download
-                            </Text>
-                        </Button>
+                        <Link to={{ pathname: 'dashboard' }}>
+                          <Button isMain className='m-right30px' function={() => {console.log("Create Room")}}>
+                          <Text weight='bold' color='#e1e1e1' dontSelect size={2.5}>
+                                  Create Room
+                              </Text>
+                          </Button>                        
+                        </Link>
+                        <Link to={{ pathname: 'download' }}>
+                          <Button className='m-left30px' function={() => {console.log("Download")}}>
+                              <Text weight='bold' color='#e1e1e1' dontSelect size={2.5}>
+                                  Download
+                              </Text>
+                          </Button>
+                        </Link>
                     </FlexDiv>
                 </CenterVertically>
            </FlexDiv>
