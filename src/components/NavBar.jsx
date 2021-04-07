@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import FlexDiv from './FlexDiv/FlexDiv';
-import GithubIcon from '../assets/github-icon.png'
-import HamburgerIcon from './HamburgerIcon';
+import GithubIcon from '../assets/github-icon.png';
+import React from 'react';
+import { ReactComponent as HamburgerIcon } from '../assets/hamburger.svg';
 import Drawer from './Drawer/Drawer';
 import { useEffect, useState } from 'react';
 
@@ -15,7 +16,6 @@ const NavContainer = styled(FlexDiv)`
     position: fixed;
     left: 0;
     width: 100%;
-background: red;
     height: 3em;
     filter: ${props => props.scrolled ? 'drop-shadow(0px 0px 4px #000000)' : ''};
 `;
@@ -30,7 +30,7 @@ const InternalContainer = styled(FlexDiv)`
     justify-content: center;
 `;
 
-const NavBar = (props) => {
+const NavBar = () => {
     
     const [isScrolled, setScrolled] = useState(false);
     const [drawerIsOpen, setDrawerOpen] = useState(false);
@@ -45,7 +45,7 @@ const NavBar = (props) => {
         <>
             <NavContainer scrolled={isScrolled} />
             <InternalContainer>
-            <HamburgerIcon drawerState={[drawerIsOpen, setDrawerOpen]} />
+            <HamburgerIcon src={HamburgerIcon} fill='white' style={{height: '2.3em', marginTop: '0.4em'}} />
             <a style={{marginLeft: 'auto', right: "8px", height: "52px", userSelect: 'none'}} href='https://github.com/Tiqur/ichis-frontend'>
                 <img src={GithubIcon} style={{height: "2em", marginTop: '0.5em'}}/>
             </a>
