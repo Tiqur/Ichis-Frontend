@@ -1,0 +1,8 @@
+.container {
+  grid-area: queue;
+  background: #212121;
+
+  @media(max-width: 801px) {
+    display: none;
+  }
+}

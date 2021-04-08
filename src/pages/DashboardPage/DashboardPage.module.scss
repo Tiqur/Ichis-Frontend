@@ -13,7 +13,8 @@
   @media(min-width: 800px) {
     grid-template-columns: calc(80vw - 14em) auto;
     grid-template-areas:
-    "video chat";
+    "video chat"
+    "queue chat";
   }
 }
 

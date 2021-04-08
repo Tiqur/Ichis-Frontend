@@ -3,7 +3,6 @@
   grid-area: chat;
 
   @media(min-width: 800px) {
-    height: calc(100vh - 3em - 4em);
     width: 14em;
   }
 }
