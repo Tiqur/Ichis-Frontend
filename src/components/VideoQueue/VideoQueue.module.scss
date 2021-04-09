@@ -1,8 +1,9 @@
 .container {
+  min-height: 8em;
   grid-area: queue;
   background: #212121;
 
-  @media(max-width: 801px) {
+  @media(max-width: 799px) {
     display: none;
   }
 }
