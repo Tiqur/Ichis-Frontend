@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Logo from '../components/Text';
 import FlexDiv from './FlexDiv/FlexDiv';
 import GithubIcon from '../assets/github-icon.png';
 import React from 'react';

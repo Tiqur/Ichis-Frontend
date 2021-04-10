@@ -15,6 +15,7 @@
 }
 
 .messageContainer {
+  justify-content: space-between;
   height: calc(100% - 1em);
   width: 100%;
   margin-bottom: 20px;
@@ -28,5 +29,7 @@
 
 .iconContainer {
   @extend .inputBox;
+  justify-content: flex-end;
+  margin-top: 1em;
   background: rgba(0, 0, 0, 0);
 }
