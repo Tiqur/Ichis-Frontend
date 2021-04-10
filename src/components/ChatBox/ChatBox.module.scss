@@ -25,6 +25,7 @@
   width: calc(100% - 2.5em);
   height: 2em;
   background: #393939;
+  justify-content: flex-end;
 }
 
 .iconContainer {
@@ -32,4 +33,11 @@
   justify-content: flex-end;
   margin-top: 1em;
   background: rgba(0, 0, 0, 0);
+}
+
+.inputButton {
+  height: 1.3em;
+  width: 1.3em;
+  margin-right: 0.35em;
+  background: #6C63FF;
 }

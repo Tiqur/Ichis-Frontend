@@ -19,11 +19,8 @@ const Icons = () => {
 const InputMessage = () => {
   return (
     <FlexDiv alignCenter className={cn(styles.inputBoxContainer)}>
-      <FlexDiv className={cn(styles.inputBox)}>
-        
-      </FlexDiv>
-      <FlexDiv className={cn(styles.iconContainer)}>
-        
+      <FlexDiv alignCenter className={cn(styles.inputBox)}>
+        <div className={cn(styles.inputButton)} />
       </FlexDiv>
     </FlexDiv>
   )
