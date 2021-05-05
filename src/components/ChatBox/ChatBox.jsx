@@ -33,13 +33,22 @@ const ChatBox = () => {
       <FlexDiv column alignCenter className={cn(styles.messageContainer)}>
         <Icons />
           { /* Messages go here */ }
-          <ChatMessage />
-          <ChatMessage />
-          <ChatMessage />
-          <ChatMessage />
-          <ChatMessage />
-          <ChatMessage />
-          { /* */ }
+          <FlexDiv column className={styles.messageScroll}>
+            <ChatMessage />
+            <ChatMessage />
+            <ChatMessage />
+            <ChatMessage />
+            <ChatMessage />
+            <ChatMessage />
+            <ChatMessage />
+            <ChatMessage />
+            <ChatMessage />
+            <ChatMessage />
+            <ChatMessage />
+            <ChatMessage />
+            <ChatMessage />
+            <ChatMessage />
+          </FlexDiv>
         <InputMessage />
       </FlexDiv>
     </FlexDiv>

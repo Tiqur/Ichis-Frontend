@@ -10,7 +10,6 @@
 .inputBoxContainer {
   flex-direction: column-reverse;
   justify-content: space-between;
-  height: 100%;
   width: 100%;
 }
 
@@ -19,6 +18,12 @@
   height: calc(100% - 1em);
   width: 100%;
   margin-bottom: 20px;
+}
+
+.messageScroll {
+  height: calc(100% - 1em);
+  width: 100%;
+  overflow-y: auto;
 }
 
 .inputBox {

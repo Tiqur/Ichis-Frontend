@@ -1,7 +1,13 @@
+import styles from './ChatMessage.module.scss';
+import FlexDiv from '../FlexDiv/FlexDiv';
 
 const ChatMessage = () => {
   return (
-      <p>This is a message</p>
+      <FlexDiv  className={styles.container}>
+        <FlexDiv>
+          <p>This is a message</p>
+        </FlexDiv>
+      </FlexDiv>
   )
 }
 
