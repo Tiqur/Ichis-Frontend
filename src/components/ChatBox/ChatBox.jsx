@@ -1,6 +1,7 @@
 import styles from './ChatBox.module.scss';
 import classNames from 'classnames';
-import FlexDiv from '../FlexDiv/FlexDiv'
+import FlexDiv from '../FlexDiv/FlexDiv';
+import ChatMessage from '../ChatMessage/ChatMessage.jsx';
 import { ReactComponent as SettingsIcon } from '../../assets/Settings.svg';
 import { ReactComponent as PermissionsIcon } from '../../assets/Permissions.svg';
 import { ReactComponent as AddModeraterIcon } from '../../assets/add_moderator.svg';
@@ -31,6 +32,14 @@ const ChatBox = () => {
     <FlexDiv column alignCenter className={cn(styles.container)}>
       <FlexDiv column alignCenter className={cn(styles.messageContainer)}>
         <Icons />
+          { /* Messages go here */ }
+          <ChatMessage />
+          <ChatMessage />
+          <ChatMessage />
+          <ChatMessage />
+          <ChatMessage />
+          <ChatMessage />
+          { /* */ }
         <InputMessage />
       </FlexDiv>
     </FlexDiv>
