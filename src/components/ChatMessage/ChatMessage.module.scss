@@ -3,7 +3,17 @@
   height: auto;
 
   & * {
-    display: block;
     height: 5em;
   }
+}
+
+.username {
+  white-space: nowrap;
+  font-family: roboto;
+  color: purple;
+}
+
+.message {
+  font-family: roboto;
+  color: #CDCDD0;
 }

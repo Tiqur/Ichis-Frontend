@@ -34,7 +34,7 @@ const ChatBox = () => {
         <Icons />
           { /* Messages go here */ }
           <FlexDiv column className={styles.messageScroll}>
-            <ChatMessage />
+            <ChatMessage operator={true} owner={true} />
             <ChatMessage />
             <ChatMessage />
             <ChatMessage />
