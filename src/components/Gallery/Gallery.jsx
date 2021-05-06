@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import styles from './Gallery.module.scss'
-
 
 
 const Gallery = (props) => {
@@ -21,7 +20,19 @@ const Gallery = (props) => {
         }, 3000);
     }
 
-    startAutoRotate();
+  useEffect(() => {
+    let isCanceled = false;
+
+    // only update after mount
+    if (isCanceled) {
+      startAutoRotate();
+    }
+    
+    // Set mounted to true
+    return () => {
+      isCanceled = true;
+    }
+  }, []);
 
     return (
         <div className={cn(styles.container)}>
